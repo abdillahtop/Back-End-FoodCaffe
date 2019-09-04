@@ -15,7 +15,7 @@ module.exports = {
 
     getHistoryById: (req, res) => {
         const idUser = req.params.idUser
-        historyModels.getHistory(idUser)
+        historyModels.getHistoryById(idUser)
              .then((result) => {
                  miscHelper.response(res, result, 200)
              })
@@ -24,6 +24,55 @@ module.exports = {
                  console.log(error)
              })
      },
+
+     getHistoryByDay: (req, res) => {
+        const idUser = req.params.idUser
+        historyModels.getHistorybyDay(idUser)
+             .then((result) => {
+                 miscHelper.response(res, result, 200)
+             })
+ 
+             .catch((error) => {
+                 console.log(error)
+             })
+     },
+
+     getHistoryByWeek: (req, res) => {
+        const idUser = req.params.idUser
+        historyModels.getHistorybyWeek(idUser)
+             .then((result) => {
+                 miscHelper.response(res, result, 200)
+             })
+ 
+             .catch((error) => {
+                 console.log(error)
+             })
+     },
+
+     getHistoryByMonth: (req, res) => {
+        const idUser = req.params.idUser
+        historyModels.getHistorybyMonth(idUser)
+             .then((result) => {
+                 miscHelper.response(res, result, 200)
+             })
+ 
+             .catch((error) => {
+                 console.log(error)
+             })
+     },
+
+     getHistoryByYear: (req, res) => {
+        const idUser = req.params.idUser
+        historyModels.getHistorybyYear(idUser)
+             .then((result) => {
+                 miscHelper.response(res, result, 200)
+             })
+ 
+             .catch((error) => {
+                 console.log(error)
+             })
+     },
+
 
     newHistory: (req, res) => {
         const data = {
