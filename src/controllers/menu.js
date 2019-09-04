@@ -19,9 +19,9 @@ module.exports = {
         const path = req.file.path;
         const getUrl = async req => {
           cloudinary.config({
-            cloud_name: process.env.CLOUD_NAME,
-            api_key: process.env.API_KEY,
-            api_secret: process.env.API_SECRET
+            cloud_name: process.env.CLOUD_NAME || 'abdi-library-storage',
+            api_key: process.env.API_KEY || 564346865871912 ,
+            api_secret: process.env.API_SECRET || 'cq0d7Q1ZvicR0rtZMcAmoHBsQ48'
           });
     
           let dataimg;
