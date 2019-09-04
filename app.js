@@ -3,7 +3,6 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 const express = require('express');
 const app = express();
-const cors = require('cors')
 const port = process.env.PORT || 5000;
 
 const menuRoute = require('./src/routers/menu')

@@ -1,7 +1,6 @@
 const menuModels = require('../models/menu')
 const miscHelper = require('../helpers/helpers')
 const cloudinary = require('cloudinary');
-require('dotenv').config() //initialize dotenv config
 
 module.exports = {
     getMenu: (req, res) => {
@@ -19,9 +18,9 @@ module.exports = {
         const path = req.file.path;
         const getUrl = async req => {
           cloudinary.config({
-            cloud_name: process.env.CLOUD_NAME || 'abdi-library-storage',
-            api_key: process.env.API_KEY || 564346865871912 ,
-            api_secret: process.env.API_SECRET || 'cq0d7Q1ZvicR0rtZMcAmoHBsQ48'
+            cloud_name:'abdi-library-storage',
+            api_key: 564346865871912 ,
+            api_secret: 'cq0d7Q1ZvicR0rtZMcAmoHBsQ48'
           });
     
           let dataimg;
