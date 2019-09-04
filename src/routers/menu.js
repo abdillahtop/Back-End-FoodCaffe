@@ -2,6 +2,7 @@ const express = require('express')
 const Route = express.Router()
 const MenuController = require('../controllers/menu')
 const multer = require('multer')
+const Auth = require('../helpers/auth')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

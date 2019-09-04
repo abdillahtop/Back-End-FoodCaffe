@@ -1,6 +1,7 @@
 const express = require('express')
 const Route = express.Router()
 const HistoController = require('../controllers/history')
+const Auth = require('../helpers/auth')
 
 Route
     .get('/', HistoController.getHistory)
