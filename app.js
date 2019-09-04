@@ -10,24 +10,6 @@ const menuRoute = require('./src/routers/menu')
 const catRoute = require('./src/routers/category')
 const userRoute = require('./src/routers/user')
 const histoRoute = require('./src/routers/history')
-const whitelist = process.env.WHITELIST
-
-const corsOptions = (req, callback) => {
-    if (whitelist.split(',').indexOf(req.header('Origin')) !== -1) {
-        console.log('Success')
-        return callback(null, {
-            origin: true
-        })
-    } else {
-        console.log('Failed')
-        return callback(null, {
-            origin: false
-        })
-    }
-}
-
-app.use(cors())
-app.options('*', cors(corsOptions))
 
 app.listen(port, () => {
     console.log(`\n App listening on port ${port} \n`)

@@ -1,5 +1,6 @@
 const historyModels = require('../models/history')
 const miscHelper = require('../helpers/helpers')
+require('dotenv').config() //initialize dotenv config
 
 module.exports = {
     getHistory: (req, res) => {
