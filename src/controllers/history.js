@@ -78,9 +78,7 @@ module.exports = {
     newHistory: (req, res) => {
         const data = {
             id_user: req.body.idCashier,
-            id_menu: req.body.idMenu,
-            id_category: req.body.idCat,
-            quantity: req.body.quantity
+            total: req.body.total
         }
         historyModels.newHistory(data)
             .then((result) => {
