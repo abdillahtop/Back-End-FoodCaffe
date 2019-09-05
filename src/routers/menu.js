@@ -17,7 +17,6 @@ const upload = multer({ storage: storage, dest: 'uploads/' })
 Route
     .get('/', MenuController.getMenu)
     .post('/', upload.single('image') , MenuController.newMenu)
-    .post('/logout/:userid', UserController.logout)
     .delete('/:idMenu', MenuController.delMenu)
 
 module.exports = Route
