@@ -28,7 +28,7 @@ module.exports = {
           await cloudinary.uploader.upload(path, result => {
             console.log("coba ini", path);
             // const fs = require('fs')
-            // fs.unlink(path)
+            // fs.unlink(path
             dataimg = result.url;
           });
           return dataimg;
